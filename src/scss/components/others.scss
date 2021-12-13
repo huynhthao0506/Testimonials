@@ -1,0 +1,40 @@
+@use '../globals' as *;
+@use '../utils' as *;
+%avatar-shared {
+    border-radius: 50%;
+    border: 2px solid #fff;
+    margin-right: rem(10);
+}
+%author-shared {
+    display: flex;
+    align-items: center;
+    font-size: $name-size;
+    color: var(--color-white);
+}
+.grid-container {
+    .avatar {
+        @extend %author-shared;
+    }
+    .avatar-img {
+        @extend %avatar-shared;
+    }
+    .avatar-name__name {
+        padding-bottom: rem(5);
+    }
+    
+}
+.text-heading {
+    color: var(--color-white);
+    font-size: $text-heading;
+    margin: rem(15) 0;
+    &--white-long {
+        color: #000;
+    }
+    &--white-short {
+        color: #000;
+    }
+}
+.text-detail {
+    font-size: $text-detail;
+    color: var(--color-light-grey);
+}
